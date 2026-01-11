@@ -1,3 +1,29 @@
+
+# CodonRL
+
+
+## Installation
+
+### Prerequisites
+
+- **OS**: Linux (tested on Ubuntu 20.04+)
+- **GPU**: NVIDIA GPU with CUDA 12.1+ support (recommended: H100, A100 for training)
+- **Conda**: Anaconda or Miniconda
+
+### Setup
+```bash
+# Clone the repository
+git clone git@github.com:Kingsford-Group/codonrl.git
+
+cd codonrl
+
+# Create conda environment
+conda env create -f environment.yml
+
+# Activate environment
+conda activate codonrl
+```
+
 ## Checkpoints
 
 We provide 55 model checkpoints trained on different protein sequences from the UniProt dataset.
@@ -49,7 +75,7 @@ CKPT_ROOT=./checkpoints
 **Important**: Update the path in `visualizeandbenchmark_multialpha.py` and `visualizeandbenchmark.py`:
 
 ```python
-sys.path.append('/path/to/codonrl')  # Change to your actual CodonRL path
+sys.path.append('/path/to/codonrl')  # Change to  actual CodonRL path
 ```
 
 ### 1. Simple Multi-Objective Benchmarking
@@ -199,3 +225,32 @@ nohup python CodonRL_main.py \
   --wandb_run_name_prefix run \
   --output_dir results
 ```
+
+
+## Citation
+
+TBD
+
+---
+
+## License
+
+TBD
+
+---
+
+## Acknowledgements
+
+TBD
+
+---
+
+## Contributing
+
+TBD
+
+---
+
+## Contact
+
+TBD
