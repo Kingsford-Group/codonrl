@@ -1,5 +1,6 @@
 import os, csv, json, math, argparse, sys
-sys.path.append('/home/shiyid/codebase/rl_mrndesign')
+sys.path.append('/path/to/codonrl')
+# TODO-change to the codonrl path
 
 import numpy as np
 import matplotlib
@@ -7,8 +8,8 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import torch
 
-from CodonRL_short_multigpu_withrecords_linearfoldablation import (
-    DQNAgent, configure_target_w_table, calculate_relative_adaptiveness,
+from CodonRL_main import (
+    CodonRL, configure_target_w_table, calculate_relative_adaptiveness,
     HUMAN_FREQ_PER_THOUSAND, ECOLLI_K12_FREQ_PER_THOUSAND,
     AA_TO_CODONS, CODON_TO_INT, INT_TO_CODON, calculate_cai,
     get_mfe_calculator
@@ -136,7 +137,7 @@ def build_agent(cfg, device):
     cfg["eps_start"] = 0.0
     cfg["eps_end"] = 0.0
     cfg["eps_decay"] = 1
-    return DQNAgent(cfg)
+    return CodonRL(cfg)
 
 def hybrid_decode(agent, protein, w, alpha=0.5):
     logw = {c: (math.log(max(w.get(c, 1e-12), 1e-12))) for c in w}
@@ -507,23 +508,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Example usage:
-# 
-# 1. Using simplified CSC model (GC content-based approximation):
-# python visualizeandbenchmark_multiobjective_fixed.py \
-#   --csv /path/to/gemorna_with_all_metrics.csv \
-#   --ckpt_root /path/to/results_linearfold_only \
-#   --alpha 0.5 \
-#   --w_cai 1.0 --w_mfe 0.05 --w_csc 0.30 --w_gc 0.10 --w_u 0.05 \
-#   --outdir /path/to/benchmark_outputs \
-#   --run_name gemorna_multi_balanced
-#
-# 2. Using real CSC data file:
-# python visualizeandbenchmark_multiobjective_fixed.py \
-#   --csv /path/to/gemorna_with_all_metrics.csv \
-#   --ckpt_root /path/to/results_linearfold_only \
-#   --alpha 0.5 \
-#   --w_cai 1.0 --w_mfe 0.05 --w_csc 0.30 --w_gc 0.10 --w_u 0.05 \
-#   --csc_file /path/to/csc_weights.json \
-#   --outdir /path/to/benchmark_outputs \
-#   --run_name gemorna_multi_balanced
