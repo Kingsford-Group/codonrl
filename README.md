@@ -37,11 +37,7 @@ Download all 55 checkpoints using the provided script:
 wget https://datarnadesign.blob.core.windows.net/codonrl-checkpoints/checkpoint_urls.txt
 
 # Download all checkpoints
-mkdir -p checkpoints
-cd checkpoints
-while read url; do
-    wget "$url"
-done < ../checkpoint_urls.txt
+bash download_checkpoint.sh
 ```
 
 ---
