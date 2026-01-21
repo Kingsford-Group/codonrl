@@ -33,8 +33,6 @@ We provide 55 model checkpoints trained on different protein sequences from the 
 Download all 55 checkpoints using the provided script:
 
 ```bash
-# Download the checkpoint list
-wget https://datarnadesign.blob.core.windows.net/codonrl-checkpoints/checkpoint_urls.txt
 
 # Download all checkpoints
 bash download_checkpoint.sh
