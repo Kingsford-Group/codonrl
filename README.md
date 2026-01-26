@@ -229,8 +229,7 @@ TBD
 
 ## License
 
-TBD
-
+This project is licensed under the [CodonRL Software License Agreement](./license.txt).
 ---
 
 ## Acknowledgements
