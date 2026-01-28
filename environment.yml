@@ -1,4 +1,4 @@
-name: codonrl_h100
+name: codonrl
 channels:
   - pytorch
   - nvidia
@@ -23,6 +23,9 @@ dependencies:
   # Scientific computing
   - numpy=1.26.*
   - scipy
+
+  # visual
+   - matplotlib
   
   # Bioinformatics tools - ViennaRNA from conda
   - viennarna=2.6.*  # From bioconda channel
@@ -32,8 +35,8 @@ dependencies:
   - jupyter
   
   - pip:
-      # Flash Attention for H100 (critical for transformer performance)
-      - flash-attn==2.6.3
+      # Flash Attention for H100 
+      # - flash-attn==2.6.3
       
       # LinearFold for structure prediction
       - linearfold-unofficial==0.1
