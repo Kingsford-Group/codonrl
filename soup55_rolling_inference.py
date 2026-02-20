@@ -19,7 +19,7 @@ from CodonRL_main import (
     AA_TO_CODONS, CODON_TO_INT, INT_TO_CODON,
     configure_target_w_table, get_mfe_calculator
 )
-from visualizeandbenchmark_multiobjective_multialpha import (
+from visualizeandbenchmark_multialpha import (
     build_agent, load_csc_weights,
     cai_safe, csc_safe, gc_content, u_pct, to_dna, to_rna,
     calculate_codon_gc, calculate_codon_u
