@@ -1,0 +1,105 @@
+{
+  "task_id": "6",
+  "protein_sequence": "MAWALLLLSLLTQGTGSWAQSALTQPRSVSGSPGQSVTISCTGTSSDVGGYNYVSWYQQHPGKAPKLMIYDVSKRPSGVPDRFSGSKSGNTASLTISGLQAEDEADYYCCSYAGSYTFH",
+  "protein_length": 119,
+  "training_time": 138006.4707109928,
+  "num_episodes": 500,
+  "mfe_method_config": {
+    "milestone_mfe_method": "linearfold",
+    "final_mfe_method": "linearfold"
+  },
+  "best_objective": {
+    "score": -110.75182299580635,
+    "sequence": "AUGGCUUGGGCGCUGCUUCUCCUGAGUCUGCUGACUCAGGGGACGGGGAGCUGGGCACAGAGCGCGCUGACGCAGCCGCGCUCUGUGUCCGGCUCCCCGGGACAGUCGGUUACCAUCAGCUGCACGGGGACUUCCUCGGAUGUUGGUGGUUACAACUACGUUAGUUGGUACCAGCAGCAUCCGGGGAAGGCCCCGAAGCUGAUGAUAUACGACGUGUCCAAGCGCCCAAGCGGUGUGCCCGACCGGUUCAGUGGGAGCAAGAGUGGUAAUACCGCCUCGUUGACCAUCUCCGGCUUGCAGGCGGAGGACGAGGCGGAUUACUACUGUUGCUCCUACGCCGGUUCGUACACCUUCCAC",
+    "episode": 220,
+    "gc_content": 61.62464985994398,
+    "mfe_comparison": {
+      "linearfold_mfe": -262.2,
+      "vienna_mfe": -262.20001220703125,
+      "mfe_difference": 1.2207031261368684e-05,
+      "mfe_relative_difference": 4.655618095537661e-08
+    }
+  },
+  "best_mfe": {
+    "score": -265.7,
+    "sequence": "AUGGCUUGGGCGCUUCUUCUCCUGAGUCUGCUGACUCAGGGGACGGGGAGCUGGGCACAGAGCGCGCUGACGCAGCCGCGCUCUGUGUCCGGCUCCCCGGGACAGUCGGUUACCAUCAGCUGCACGGGGACUUCCUCGGAUGUUGGUGGUUACAACUACGUUAGUUGGUACCAGCAACAUCCGGGGAAGGCCCCGAAGCUGAUGAUAUACGACGUGUCCAAGCGCCCAAGCGGUGUGCCGGACCGGUUCAGUGGGAGCAAGAGUGGUAAUACCGCCUCGUUGACCAUCUCCGGCUUGCAGGCGGAGGACGAGGCGGAUUACUACUGUUGCUCCUACGCCGGUUCGUACACCUUCCAC",
+    "cai": 0.7082948619208613,
+    "episode": 188,
+    "gc_content": 61.06442577030813,
+    "mfe_comparison": {
+      "linearfold_mfe": -265.7,
+      "vienna_mfe": -265.70001220703125,
+      "mfe_difference": 1.2207031261368684e-05,
+      "mfe_relative_difference": 4.594290799623358e-08
+    }
+  },
+  "best_cai": {
+    "score": 0.7414730647127927,
+    "sequence": "AUGGCCUGGGCGCUUCUUCUGCUGAGUCUGCUGACUCAGGGGACGGGUAGCUGGGCACAGAGCGCGCUGACUCAGCCGCGCUCUGUGUCCGGCUCCCCGGGACAGUCGGUUACCAUUAGCUGCACGGGGACUUCCUCAGAUGUGGGUGGCUACAACUACGUAAGUUGGUACCAGCAGCAUCCGGGGAAGGCCCCGAAGCUGAUGAUAUACGACGUGUCCAAGCGCCCAAGCGGUGUGCCGGACCGGUUCAGUGGGAGCAAGAGUGGUAAUACCGCCUCGUUGACCAUCUCCGGCUUGCAGGCCGAGGACGAGGCGGAUUACUACUGUUGCUCCUACGCCGGUUCGUACACCUUCCAU",
+    "mfe": -232.2,
+    "episode": 117,
+    "gc_content": 60.78431372549019,
+    "mfe_comparison": {
+      "linearfold_mfe": -232.2,
+      "vienna_mfe": -232.1999969482422,
+      "mfe_difference": 3.0517578011313162e-06,
+      "mfe_relative_difference": 1.314279857061652e-08
+    }
+  },
+  "final_metrics": {
+    "objective": -97.03206580926272,
+    "mfe": -258.6,
+    "cai": 0.712177263352754
+  },
+  "mfe_calculator_stats": {
+    "vienna_calls": 3,
+    "linearfold_calls": 2007,
+    "avg_vienna_time": 1.3192494710286459e-05,
+    "avg_linearfold_time": 0.007099983641087979
+  },
+  "config": {
+    "protein_seq": null,
+    "protein_file": null,
+    "guide_mrna_seq": null,
+    "guide_mrna_file": null,
+    "json_input_file": "../../datasets/uniprot_le_500/uniprot_merged_proteins_le_500_lambda0_with_proteins.json",
+    "embedding_dim": 128,
+    "n_head": 8,
+    "n_encoder_layer": 3,
+    "n_decoder_layer": 3,
+    "transformer_dim_feedforward": 512,
+    "transformer_dropout": 0.1,
+    "num_episodes": 500,
+    "protein_max_len": 501,
+    "learning_rate": 2e-05,
+    "adamw_weight_decay": 0.01,
+    "gradient_clipping_norm": 1.0,
+    "batch_size": 64,
+    "buffer_size": 100000,
+    "gamma": 0.99,
+    "eps_start": 1.0,
+    "eps_end": 0.01,
+    "eps_decay_factor": 50.0,
+    "target_update_freq": 150,
+    "prepopulate_buffer": true,
+    "guide_reward_bonus": 0.5,
+    "lambda_val": 4.0,
+    "milestone_reward_weight": 0.3,
+    "milestone_mfe_method": "linearfold",
+    "final_mfe_method": "linearfold",
+    "device": "cuda:0",
+    "use_amp": true,
+    "use_protein_cache": true,
+    "parallel_devices": "cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0,cuda:0",
+    "max_workers": 55,
+    "mfe_workers": 4,
+    "codon_table": "human",
+    "output_dir": "results_linearfold_only",
+    "wandb_log": true,
+    "wandb_project": "speedupver2-linearfoldablationH100multigpu-dqn-guided-uniprot-le-500",
+    "wandb_run_name_prefix": "learn_rate2e-5",
+    "eps_decay": 5950,
+    "run_id_str": "6",
+    "wandb_run_name": "learn_rate2e-5-6-worker5-job0-linearfold-linearfold"
+  }
+}
