@@ -25,7 +25,7 @@ dependencies:
   - scipy
 
   # visual
-  - matplotlib
+   - matplotlib
   
   # Bioinformatics tools - ViennaRNA from conda
   - viennarna=2.6.*  # From bioconda channel

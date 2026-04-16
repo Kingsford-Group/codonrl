@@ -223,14 +223,7 @@ nohup python CodonRL_main.py \
 
 ## Citation
 
-@article{du2026codonrl,
-  title={CodonRL: Multi-Objective Codon Sequence Optimization Using Demonstration-Guided Reinforcement Learning},
-  author={Du, Shiyi and Kaynar, G{\"u}n and Li, Jiayi and You, Zhaoyi and Tang, Shijie and Kingsford, Carl},
-  journal={bioRxiv},
-  pages={2026--02},
-  year={2026},
-  publisher={Cold Spring Harbor Laboratory}
-}
+TBD
 
 ---
 
@@ -239,3 +232,18 @@ nohup python CodonRL_main.py \
 This project is licensed under the [CodonRL Software License Agreement](./license.txt).
 
 ---
+## Acknowledgements
+
+TBD
+
+---
+
+## Contributing
+
+TBD
+
+---
+
+## Contact
+
+TBD
