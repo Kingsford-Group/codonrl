@@ -63,7 +63,7 @@ def rolling_decode(agent, protein, w, csc_weights, window_size=500,
     for pos in range(total_len):
         if pos < window_size:
             win_start = 0
-            win_protein = protein[0:pos + 1]
+            win_protein = protein[0:min(window_size, total_len)]
             mrna_context = mrna
             pos_in_window = pos
         else:
