@@ -62,7 +62,7 @@ This demo runs inference for one protein sequence with one trained CodonRL model
 
 The demo uses the first row of the example GeMoRNA benchmark table:
 
-- Input table: `datasets/uniprot_le_500/gemorna_with_all_metrics.csv`
+- Input table: `datasets/gemorna_with_all_metrics.csv`
 - Demo row: `index=1`
 - Protein length: `343` amino acids
 - Baseline CDS length: `1029` nucleotides
@@ -79,7 +79,7 @@ Create a one-row demo input file and run single-model inference:
 
 ```bash
 mkdir -p demo_outputs
-awk 'NR==1 || NR==2' datasets/uniprot_le_500/gemorna_with_all_metrics.csv > demo_outputs/demo_input_index1.csv
+awk 'NR==1 || NR==2' datasets/gemorna_with_all_metrics.csv > demo_outputs/demo_input_index1.csv
 
 python visualizeandbenchmark.py \
   --csv demo_outputs/demo_input_index1.csv \
